@@ -1,0 +1,37 @@
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 110
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ModuleLength:
+  Max: 600
+
+Metrics/AbcSize:
+  Max: 20
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'Gemfile.lock'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'log/**/*'
+    - 'lib/templates/**/*'
+    - 'config/initializers/**/*'
+
+Rails:
+  Enabled: true
+
+
+Lint/UnusedMethodArgument:
+  Description: 'Checks for unused method arguments.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars'
+  Enabled: false
