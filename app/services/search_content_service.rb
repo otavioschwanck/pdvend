@@ -12,7 +12,7 @@ class SearchContentService
       content = service.content
 
       unless scan_content_count(content).zero?
-        found_links << {url: link.url, times: scan_content_count(content)}
+        found_links << { url: link.url, times: scan_content_count(content) }
       end
     end
 
@@ -26,6 +26,6 @@ class SearchContentService
   end
 
   def make_response(links)
-    links.sort_by { |a| -a[:times] }.map{ |link| link[:url] }.to_json
+    links.sort_by { |a| -a[:times] }.map { |link| link[:url] }.to_json
   end
 end
