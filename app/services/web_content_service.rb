@@ -4,6 +4,6 @@ class WebContentService
   end
 
   def content
-    Sanitize.fragment(HTTParty.get(URI.parse(@link.url)).body)
+    Sanitize.fragment(HTTParty.get(@link.url).body)
   end
 end

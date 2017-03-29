@@ -1,24 +1,23 @@
-# README
+# PDVend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simples API em Rails com as seguintes funcionalidades:
+- Ler o texto de sites
+- Pesquisar palavras nos sites já pesquisados.
 
-Things you may want to cover:
+### Requisitos
+- `ruby >= 2.3.0`
+- `rails >= 5.0`
+- `SQLite`
 
-* Ruby version
+### Metodologia de Desenvolvimento: TDD
+Todo sistema foi desenvolvido usando o `TDD (Test Driven Development)`
 
-* System dependencies
+### Documentação dos endpoints:
+Para ter acesso a documentaçao da API, acesse nossa [Wiki](https://github.com/otavioschwanck/pdvend/wiki/Documenta%C3%A7%C3%A3o-da-API)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Bibliotecas complementares:
+- [rubocop](https://github.com/bbatsov/rubocop) - Analise da escrita de código e boas práticas.  
+- [httparty](https://github.com/jnunemaker/httparty) - Requisições HTTP de maneira fácil.
+- [simplescov](https://github.com/colszowka/simplecov) - Análise da cobertura dos testes.  Cobertura: 100%.
+- [rspec](https://github.com/rspec/rspec-rails) - Teste de toda aplicação.
+- Outras
