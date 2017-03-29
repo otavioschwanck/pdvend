@@ -48,7 +48,9 @@ GEM
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    crass (1.0.2)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     erubis (2.7.0)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
@@ -83,6 +85,8 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
+    nokogumbo (1.4.10)
+      nokogiri
     parser (2.3.1.4)
       ast (~> 2.2)
     powerpack (0.1.1)
@@ -150,8 +154,17 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
     safe_yaml (1.0.4)
+    sanitize (4.4.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.4.4)
+      nokogumbo (~> 1.4.1)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -189,13 +202,16 @@ DEPENDENCIES
   ffaker
   httparty
   listen (~> 3.0.5)
+  nokogiri
   puma (~> 3.0)
   rails (~> 5.0.1)
   rails-controller-testing
   responders
   rspec-rails (>= 3.5.0)
   rubocop
+  sanitize
   shoulda-matchers (~> 3.1.1)
+  simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

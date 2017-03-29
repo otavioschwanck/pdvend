@@ -31,6 +31,17 @@ RSpec.describe LinksController, type: :controller do
     end
   end
 
+  describe '.index' do
+    it 'use SearchContenctService' do
+      json = ['google.com'].to_json
+      expect_any_instance_of(SearchContentService).to receive(:search).and_return(json)
+
+      get :index, key_word: 'Pesquisar'
+
+      expect(response.body).to eq(json)
+    end
+  end
+
   describe '.show' do
     context 'with a valid id' do
       let!(:link) { create(:link) }

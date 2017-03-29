@@ -6,6 +6,8 @@ gem 'puma', '~> 3.0'
 gem 'rubocop'
 gem 'httparty'
 gem 'responders'
+gem 'sanitize'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'byebug'
@@ -21,6 +23,7 @@ group :development do
 end
 
 group :test do
+  gem 'simplecov'
   gem 'fakeweb', '~> 1.3'
   gem 'webmock', '~> 2.3.2'
   gem 'ffaker'

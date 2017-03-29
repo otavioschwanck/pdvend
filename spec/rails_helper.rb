@@ -33,8 +33,16 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+require 'webmock/rspec'
+
+SimpleCov.start
+
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+
+  config.before(:each) do
+    WebMock.disable_net_connect!
+  end
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

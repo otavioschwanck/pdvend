@@ -8,7 +8,7 @@ class LinksController < ApplicationController
     if @link.save
       redirect_to @link
     else
-      respond_with(@link, status: 402)
+      render nothing: true, status: 402
     end
   end
 

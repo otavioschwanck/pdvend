@@ -8,11 +8,11 @@ RSpec.describe WebContentService, type: :service do
     context 'when a valid URL' do
       before(:each) do
         WebMock.stub_request(:get, 'https://www.pdvend.com.br/')
-               .to_return(body: '<h1>PDVend For The Win <3</h1>')
+               .to_return(body: '<h1 class="pdvend">PDVend For The Win <3</h1>')
       end
 
-      it 'return content of the page' do
-        expect(service.content).to eq('<h1>PDVend For The Win <3</h1>')
+      it 'return content of the page cleaned' do
+        expect(service.content).to eq(' PDVend For The Win &lt;3 ')
       end
     end
 
@@ -23,7 +23,7 @@ RSpec.describe WebContentService, type: :service do
       end
 
       it 'do error' do
-        expect(service.content).to eq(nil)
+        expect(service.content).to eq('')
       end
     end
   end

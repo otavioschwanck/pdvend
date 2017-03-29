@@ -4,8 +4,6 @@ class WebContentService
   end
 
   def content
-    byebug
-    
-    HTTParty.get(@link.url).body
+    Sanitize.fragment(HTTParty.get(URI.parse(@link.url)).body)
   end
 end
